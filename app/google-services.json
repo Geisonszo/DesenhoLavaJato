@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "999942996200",
+    "firebase_url": "https://lavajato-adcfb.firebaseio.com",
+    "project_id": "lavajato-adcfb",
+    "storage_bucket": "lavajato-adcfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999942996200:android:70bf14f04869e7ba",
+        "android_client_info": {
+          "package_name": "fga.unb.desenho20162.lavajato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999942996200-qcinm471900sna1jb31kjcci8oirdfde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOfJ-KVVXfPKrHG7Hk4mwdelWBX5hzBkg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">LavaJato</string>
+    <string name="app_name">Ducha Rápida</string>
+    <string name="title_activity_lavagens">LavagensActivity</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>

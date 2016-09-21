@@ -1,23 +1,23 @@
 package fga.unb.desenho20162.lavajato.view;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 
 import fga.unb.desenho20162.lavajato.R;
 
-public class MainActivity extends AppCompatActivity {
+public class ListarLavagens extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lista_lavagens);
     }
 
-    public void listarLavagens(View view) {
+    public void cadastrarLavagem(View view) {
 
-        Intent listarLavagens = new Intent(this, ListarLavagens.class);
-        startActivity(listarLavagens);
+        Intent cadastrarLavagem = new Intent(this, CadastrarLavagem.class);
+        startActivity(cadastrarLavagem);
     }
 }

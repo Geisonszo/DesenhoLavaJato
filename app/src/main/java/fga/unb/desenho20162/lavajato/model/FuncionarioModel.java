@@ -1,13 +1,13 @@
-package fga.unb.desenho20162.lavajato.presenter;
+package fga.unb.desenho20162.lavajato.model;
 
-public class FuncionarioPresenter {
+public class FuncionarioModel {
 
-    String nome;
-    String cpf;
-    char sexo;
-    float diaria;
-    String telefone;
-    String endereco;
+    private String nome;
+    private String cpf;
+    private char sexo;
+    private float diaria;
+    private String telefone;
+    private String endereco;
 
     public void setNome(String nome) {
         this.nome = nome;

@@ -1,9 +1,9 @@
-package fga.unb.desenho20162.lavajato.presenter;
+package fga.unb.desenho20162.lavajato.model;
 
-public class PontoPresenter {
+public class PontoModel {
 
-    String data;
-    String pontoDia;
+    private String data;
+    private String pontoDia;
 
     public void setData(String data) {
         this.data = data;

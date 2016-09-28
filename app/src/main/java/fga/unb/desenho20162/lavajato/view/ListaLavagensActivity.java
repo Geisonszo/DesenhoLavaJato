@@ -7,7 +7,7 @@ import android.view.View;
 
 import fga.unb.desenho20162.lavajato.R;
 
-public class ListarLavagens extends AppCompatActivity {
+public class ListaLavagensActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class ListarLavagens extends AppCompatActivity {
 
     public void cadastrarLavagem(View view) {
 
-        Intent cadastrarLavagem = new Intent(this, CadastrarLavagem.class);
+        Intent cadastrarLavagem = new Intent(this, CadastroLavagemActivity.class);
         startActivity(cadastrarLavagem);
     }
 }

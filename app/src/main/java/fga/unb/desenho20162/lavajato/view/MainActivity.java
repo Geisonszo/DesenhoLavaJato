@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void listarLavagens(View view) {
 
-        Intent listarLavagens = new Intent(this, ListarLavagens.class);
+        Intent listarLavagens = new Intent(this, ListaLavagensActivity.class);
         startActivity(listarLavagens);
     }
 }

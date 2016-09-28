@@ -1,9 +1,9 @@
-package fga.unb.desenho20162.lavajato.presenter;
+package fga.unb.desenho20162.lavajato.model;
 
-public class TipoLavagem {
+public class TipoLavagemModel {
 
-    float valor;
-    String descricao;
+    private float valor;
+    private String descricao;
 
     public void setValor(float valor) {
         this.valor = valor;

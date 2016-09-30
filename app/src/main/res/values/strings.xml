@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Ducha Rápida</string>
-    <string name="title_activity_lavagens">LavagensActivity</string>
-    <string name="cadastrar">Cadastrar</string>
+    <string name="btn_cadastrar">CADASTRAR</string>
+    <string name="btn_funcionarios">FUNCIONÁRIOS</string>
+    <string name="btn_lavagens">LAVAGENS</string>
+    <string name="btn_relatorios">RELATÓRIOS</string>
 </resources>

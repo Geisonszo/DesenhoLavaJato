@@ -9,7 +9,20 @@ public class FuncionarioModel {
     private String telefone;
     private String endereco;
 
-    public void setNome(String nome) {
+    public FuncionarioModel () {
+
+    }
+
+    public FuncionarioModel ( String nome, String cpf, char sexo, float diaria, String telefone, String endereco ) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.sexo = sexo;
+        this.diaria = diaria;
+        this.telefone = telefone;
+        this.endereco = endereco;
+    }
+
+    public void setNome( String nome) {
         this.nome = nome;
     }
 

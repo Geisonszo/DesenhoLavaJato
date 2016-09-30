@@ -1,16 +1,18 @@
 package fga.unb.desenho20162.lavajato.view;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 
-import fga.unb.desenho20162.lavajato.Presenter.CadastrarLavagemPresenter;
+import fga.unb.desenho20162.lavajato.Controller.CadastrarLavagemController;
 import fga.unb.desenho20162.lavajato.R;
 
 public class CadastroLavagemActivity extends AppCompatActivity {
 
-    private CadastrarLavagemPresenter novoCadastro = new CadastrarLavagemPresenter();
+    private CadastrarLavagemController cadastro = new CadastrarLavagemController();
 
     private EditText nome;
     private EditText telefone;
@@ -64,13 +66,25 @@ public class CadastroLavagemActivity extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                novoCadastro.cadastrar(nome.getEditableText().toString(),
+                cadastro.cadastrar(nome.getEditableText().toString(),
                         telefone.getEditableText().toString(),
                         tamanho.getSelectedItem().toString(),
                         placa.getEditableText().toString(),
                         cor.getEditableText().toString(),
                         marca.getEditableText().toString(),
                         modelo.getEditableText().toString());
+
+                Intent listarLavagem = new Intent();
+                listarLavagem.setClass(CadastroLavagemActivity.this, ListaLavagensActivity.class);
+                startActivity(listarLavagem);
+                finish();
+
+                Context context = getApplicationContext();
+                CharSequence text = "A lavagem foi adicionada!";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
             }
         });
 
@@ -80,9 +94,10 @@ public class CadastroLavagemActivity extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                //AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-
-
+                Intent listarLavagem = new Intent();
+                listarLavagem.setClass(CadastroLavagemActivity.this, ListaLavagensActivity.class);
+                startActivity(listarLavagem);
+                finish();
             }
         });
     }

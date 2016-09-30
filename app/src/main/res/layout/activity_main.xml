@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".view.MainActivity"
+    tools:context="fga.unb.desenho20162.lavajato.view.MainActivity"
     android:background="@color/common_google_signin_btn_text_dark_default">
 
     <LinearLayout
@@ -20,12 +20,13 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="19dp">
+        android:layout_marginBottom="19dp"
+        tools:ignore="UselessParent">
 
         <Button
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:text="LAVAGENS"
+            android:text="@string/btn_lavagens"
             android:id="@+id/button"
             android:layout_gravity="center_horizontal"
             android:onClick="listarLavagens"
@@ -34,19 +35,16 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="FUNCIONÁRIOS"
+            android:text="@string/btn_funcionarios"
             android:id="@+id/button2"
             android:layout_gravity="center_horizontal" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="RELATÓRIOS"
+            android:text="@string/btn_relatorios"
             android:id="@+id/button3"
             android:layout_gravity="center_horizontal"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/linearLayout"
-            android:layout_alignStart="@+id/linearLayout"
             android:layout_marginBottom="38dp" />
 
     </LinearLayout>

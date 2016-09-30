@@ -22,7 +22,7 @@ public class DatabaseConnection {
             instance = new DatabaseConnection();
         }
         else{
-            //Do nothing!
+            // Do nothing.
         }
 
         return instance;

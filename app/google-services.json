@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "999942996200-qjf66hlckcuppe25abr2aqedm88cto7j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fga.unb.desenho20162.lavajato",
+            "certificate_hash": "9CCAFC18A5121FE67F015F07A0F5E23EF292B46A"
+          }
+        },
+        {
           "client_id": "999942996200-qcinm471900sna1jb31kjcci8oirdfde.apps.googleusercontent.com",
           "client_type": 3
         }

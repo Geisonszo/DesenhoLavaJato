@@ -8,145 +8,167 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="fga.unb.desenho20162.lavajato.view.CadastrarLavagem">
+    tools:context="fga.unb.desenho20162.lavajato.view.CadastroLavagemActivity">
 
-    <TextView
-        android:text="Cliente"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Nome"
+            android:ems="10"
+            android:id="@+id/nomeCliente"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText"
+            tools:inputType="textCapCharacters" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefone"
+            android:ems="10"
+            android:id="@+id/telefoneCliente"
+            android:layout_below="@+id/nomeCliente"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText"
+            tools:inputType="phone"
+            android:inputType="phone" />
+
+        <TextView
+            android:text="Veículo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/telefoneCliente"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tamanhoVeiculo"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Placa"
+            android:ems="10"
+            android:id="@+id/placaVeiculo" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="Cor"
+            android:ems="10"
+            android:layout_marginTop="11dp"
+            android:id="@+id/corVeiculo"
+            android:layout_below="@+id/tamanhoVeiculo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="Marca"
+            android:ems="10"
+            android:id="@+id/marcaVeiculo"
+            android:layout_below="@+id/corVeiculo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modelo"
+            android:ems="10"
+            android:id="@+id/modeloVeiculo"
+            android:layout_below="@+id/marcaVeiculo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText"
+            android:inputType="text" />
+
+        <TextView
+            android:text="Tipo de Lavagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            tools:ignore="HardcodedText"
+            android:layout_above="@+id/tipoLavagem"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="22dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tipoLavagem"
+            android:layout_marginBottom="24dp"
+            android:layout_above="@+id/buttonCancelar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText" />
+        android:layout_alignParentStart="true">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Nome"
-        android:ems="10"
-        android:id="@+id/nomeCliente"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText"
-        tools:inputType="textCapCharacters" />
+        <Button
+            android:text="cadastrar"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:id="@+id/buttonCandastrar"
+            tools:ignore="RelativeOverlap"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/buttonCancelar"
+            android:layout_toStartOf="@+id/buttonCancelar"
+            android:layout_marginRight="21dp"
+            android:layout_marginEnd="21dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Telefone"
-        android:ems="10"
-        android:id="@+id/telefoneCliente"
-        android:layout_below="@+id/nomeCliente"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText"
-        tools:inputType="phone" />
+        <Button
+            android:text="Cancelar"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCancelar"
+            tools:ignore="HardcodedText"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:text="Veículo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/telefoneCliente"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tamanhoVeiculo"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Cor"
-        android:ems="10"
-        android:layout_marginTop="11dp"
-        android:id="@+id/corVeiculo"
-        android:layout_below="@+id/tamanhoVeiculo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Marca"
-        android:ems="10"
-        android:id="@+id/marcaVeiculo"
-        android:layout_below="@+id/corVeiculo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Modelo"
-        android:ems="10"
-        android:id="@+id/modeloVeiculo"
-        android:layout_below="@+id/marcaVeiculo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:text="Tipo de Lavagem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/modeloVeiculo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="HardcodedText" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tipoLavagem"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp" />
-
-    <Button
-        android:text="@string/cadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginBottom="11dp"
-        android:id="@+id/buttonCandastrar"
-        tools:ignore="RelativeOverlap" />
-
-    <Button
-        android:text="Cancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonCandastrar"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="62dp"
-        android:layout_marginEnd="62dp"
-        android:id="@+id/buttonCancelar"
-        tools:ignore="HardcodedText" />
+    </RelativeLayout>
 
 </RelativeLayout>

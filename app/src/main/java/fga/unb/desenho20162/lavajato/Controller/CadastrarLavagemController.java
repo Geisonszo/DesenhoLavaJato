@@ -1,6 +1,8 @@
 package fga.unb.desenho20162.lavajato.Controller;
 
+import fga.unb.desenho20162.lavajato.DAO.LavagemDAO;
 import fga.unb.desenho20162.lavajato.model.ClienteModel;
+import fga.unb.desenho20162.lavajato.model.TipoLavagemModel;
 import fga.unb.desenho20162.lavajato.model.VeiculoModel;
 
 
@@ -15,5 +17,13 @@ public class CadastrarLavagemController {
         clienteModel = new ClienteModel(nome, telefone);
         veiculoModel = new VeiculoModel(tamanho, placa, cor, marca, modelo);
 
+        salvarLavagem(clienteModel, veiculoModel);
+    }
+
+    private void salvarLavagem(ClienteModel clienteModel, VeiculoModel veiculoModel) {
+
+        LavagemDAO lavagem = new LavagemDAO();
+
+        lavagem.createLavagem(clienteModel, veiculoModel);
     }
 }

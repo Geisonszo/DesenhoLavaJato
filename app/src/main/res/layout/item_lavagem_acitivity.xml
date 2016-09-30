@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idNome"
+        android:textSize="24sp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="telefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTelefone"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="tamanho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTamanho"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="cor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idCor"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="placa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idPlaca"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idMarca"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="modelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idModelo"
+        android:textSize="24sp" />
+</LinearLayout>

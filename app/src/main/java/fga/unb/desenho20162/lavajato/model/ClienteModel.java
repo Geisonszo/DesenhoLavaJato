@@ -14,18 +14,22 @@ public class ClienteModel {
     }
 
     private void setNome(String nome) {
+
         this.nome = nome;
     }
 
     private void setTelefone(String telefone) {
+
         this.telefone = telefone;
     }
 
     public String getNome() {
+
         return nome;
     }
 
     public String getTelefone() {
+
         return telefone;
     }
 }

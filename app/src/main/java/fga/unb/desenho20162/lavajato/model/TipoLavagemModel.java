@@ -5,6 +5,15 @@ public class TipoLavagemModel {
     private float valor;
     private String descricao;
 
+    public TipoLavagemModel() {
+
+    }
+
+    public TipoLavagemModel(String descricao, float valor) {
+
+        setDescricao(descricao);
+    }
+
     public void setValor(float valor) {
         this.valor = valor;
     }

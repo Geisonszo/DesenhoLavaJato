@@ -8,7 +8,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+<<<<<<< HEAD
     tools:context="fga.unb.desenho20162.lavajato.view.ListaLavagensActivity"
+=======
+    tools:context=".view.ListaLavagensActivity"
+>>>>>>> fbd923a508e5f5e6a2284290769a2a4f0963ad26
     android:background="@color/common_google_signin_btn_text_dark_default">
 
     <android.support.v7.widget.RecyclerView

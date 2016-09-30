@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 
-import fga.unb.desenho20162.lavajato.Presenter.CadastrarLavagemPresenter;
+import fga.unb.desenho20162.lavajato.Controller.CadastrarLavagemController;
 import fga.unb.desenho20162.lavajato.R;
 
 public class CadastroLavagemActivity extends AppCompatActivity {
 
-    private CadastrarLavagemPresenter novoCadastro = new CadastrarLavagemPresenter();
+    private CadastrarLavagemController novoCadastro = new CadastrarLavagemController();
 
     private EditText nome;
     private EditText telefone;

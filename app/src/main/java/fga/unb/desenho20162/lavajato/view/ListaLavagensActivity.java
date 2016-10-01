@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import fga.unb.desenho20162.lavajato.Adapter.LavagemRecyclerAdapter;
 import fga.unb.desenho20162.lavajato.Adapter.LavagemViewHolder;
@@ -36,8 +35,6 @@ public class ListaLavagensActivity extends AppCompatActivity {
         adapter = new LavagemRecyclerAdapter(LavagemModel.class, R.layout.item_lavagem, LavagemViewHolder.class, firebaseRef);
 
         recyclerView.setAdapter(adapter);
-
-
     }
 
     @Override

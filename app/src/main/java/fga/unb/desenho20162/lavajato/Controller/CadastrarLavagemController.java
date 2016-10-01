@@ -24,6 +24,6 @@ public class CadastrarLavagemController {
 
         LavagemDAO lavagem = new LavagemDAO();
 
-        lavagem.createLavagem(clienteModel, veiculoModel);
+        lavagem.saveLavagemFirebase(clienteModel, veiculoModel);
     }
 }

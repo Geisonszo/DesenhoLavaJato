@@ -1,4 +1,4 @@
-package fga.unb.desenho20162.lavajato.view;
+package fga.unb.desenho20162.lavajato.Adapter;
 
 
 import android.support.v7.widget.RecyclerView;

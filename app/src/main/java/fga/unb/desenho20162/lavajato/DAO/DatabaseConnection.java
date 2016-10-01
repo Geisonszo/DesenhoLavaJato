@@ -5,36 +5,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class DatabaseConnection {
 
-    private static DatabaseConnection instance;
+    private final static String FIREBASE_URL = "https://lavajato-adcfb.firebaseio.com";
 
+    final private DatabaseReference firebase = FirebaseDatabase.getInstance()
+            .getReferenceFromUrl(FIREBASE_URL);
 
-    public static DatabaseReference establishConnection() {
-
-        DatabaseReference connection = FirebaseDatabase.getInstance().getReference();
-
-        return connection;
-    }
-
-    private static DatabaseConnection getInstance(){
-
-        if(instance == null){
-
-            instance = new DatabaseConnection();
-        }
-        else{
-            // Do nothing.
-        }
-
-        return instance;
-    }
-
-
-    private FirebaseDatabase getConnection() {
-
-        FirebaseDatabase connection;
-
-        connection =  FirebaseDatabase.getInstance();
-
-        return connection;
+    public DatabaseReference getFirebase () {
+        return firebase;
     }
 }

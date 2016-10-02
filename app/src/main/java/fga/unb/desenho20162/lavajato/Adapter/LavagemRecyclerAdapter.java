@@ -17,10 +17,11 @@ public class LavagemRecyclerAdapter extends FirebaseRecyclerAdapter <LavagemMode
 
         viewHolder.nome.setText(model.getNome());
         viewHolder.telefone.setText(model.getTelefone());
-        viewHolder.tamanho.setText(model.getTamanho());
+        viewHolder.tamanho.setImageResource(model.getTamanho());
         viewHolder.placa.setText(model.getPlaca());
         viewHolder.cor.setText(model.getCor());
         viewHolder.marca.setText(model.getMarca());
         viewHolder.modelo.setText(model.getModelo());
+        viewHolder.tipoLavagem.setText(model.getTipoLavagem());
     }
 }

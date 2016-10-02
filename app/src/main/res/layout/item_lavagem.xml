@@ -1,56 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
 
-    <TextView
-        android:text="Nome"
+    <android.support.v7.widget.CardView
+        android:orientation="vertical"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idNome"
-        android:textSize="24sp"
-        android:textAlignment="center" />
+        android:layout_height="220dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:elevation="6dp">
 
-    <TextView
-        android:text="telefone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idTelefone"
-        android:textSize="24sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:text="tamanho"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idTamanho"
-        android:textSize="24sp" />
+            <TextView
+                android:text="TIPO LAVAGEM"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:id="@+id/idTipolavagem"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textStart"
+                android:textSize="30sp"
+                android:background="@color/buttonColor"
+                android:layout_toRightOf="@+id/tipo_lavagem"
+                android:layout_toEndOf="@+id/tipo_lavagem"
+                android:textColor="@color/buttonTextColor"/>
 
-    <TextView
-        android:text="cor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idCor"
-        android:textSize="24sp" />
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageTamanho"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/idTipolavagem"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
 
-    <TextView
-        android:text="placa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idPlaca"
-        android:textSize="24sp" />
+            <TextView
+                android:text="Placa:"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/placa"
+                android:layout_alignTop="@+id/idPlaca"
+                android:layout_toRightOf="@+id/imageTamanho"
+                android:layout_alignBottom="@+id/idPlaca"
+                android:textSize="16sp"
+                android:textAlignment="textStart"
+                android:layout_alignRight="@+id/cliente"
+                android:layout_alignEnd="@+id/cliente"/>
 
-    <TextView
-        android:text="marca"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idMarca"
-        android:textSize="24sp" />
+            <TextView
+                android:text="placa"
+                android:layout_width="108dp"
+                android:layout_height="40dp"
+                android:id="@+id/idPlaca"
+                android:textSize="24sp"
+                android:textAlignment="textStart"
+                android:layout_below="@+id/idTipolavagem"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:paddingEnd="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                android:layout_toRightOf="@+id/placa"
+                android:layout_toEndOf="@+id/placa"/>
 
-    <TextView
-        android:text="modelo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idModelo"
-        android:textSize="24sp" />
+            <TextView
+                android:text="Tipo lavagem:"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:id="@+id/tipo_lavagem"
+                android:background="@color/authui_colorPrimary"
+                android:textColor="@color/buttonTextColor"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                android:paddingRight="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                android:paddingStart="@dimen/com_facebook_auth_dialog_corner_radius_oversized"/>
+
+            <TextView
+                android:text="Cliente: "
+                android:layout_width="wrap_content"
+                android:id="@+id/cliente"
+                android:layout_below="@+id/placa"
+                android:layout_alignBottom="@+id/idNome"
+                android:layout_toLeftOf="@+id/idNome"
+                android:layout_toRightOf="@+id/imageTamanho"
+                android:layout_toEndOf="@+id/imageTamanho"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:text="Cor: "
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:id="@+id/cor"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/imageTamanho"
+                android:layout_alignRight="@+id/fone"
+                android:layout_alignEnd="@+id/fone"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:text="modelo"
+                android:layout_width="90dp"
+                android:id="@+id/idModelo"
+                android:layout_height="30dp"
+                android:layout_below="@+id/idTelefone"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                android:layout_alignBottom="@+id/idMarca"
+                android:layout_toRightOf="@+id/idMarca"
+                android:layout_toEndOf="@+id/idMarca"/>
+
+            <TextView
+                android:text="Fone: "
+                android:layout_width="wrap_content"
+                android:id="@+id/fone"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cliente"
+                android:layout_toRightOf="@+id/imageTamanho"
+                />
+
+            <TextView
+                android:text="Telefone"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/idTelefone"
+                android:textSize="12sp"
+                android:layout_alignBaseline="@+id/fone"
+                android:layout_alignBottom="@+id/fone"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textStart"
+                android:layout_toRightOf="@+id/fone"
+                android:layout_toEndOf="@+id/fone"/>
+
+            <TextView
+                android:text="marca"
+                android:layout_height="30dp"
+                android:id="@+id/idMarca"
+                android:textSize="16sp"
+                android:textAlignment="textStart"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/idTelefone"
+                android:layout_toRightOf="@+id/imageTamanho"
+                android:layout_alignRight="@+id/placa"
+                android:layout_alignEnd="@+id/placa"/>
+
+            <TextView
+                android:text="cor"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:id="@+id/idCor"
+                android:textSize="16sp"
+                android:textAlignment="textStart"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/cor"
+                android:layout_toEndOf="@+id/cor"/>
+
+            <TextView
+                android:text="Nome"
+                android:layout_width="100dp"
+                android:id="@+id/idNome"
+                android:textSize="12sp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="49dp"
+                android:layout_marginStart="49dp"
+                android:layout_below="@+id/placa"
+                android:layout_toRightOf="@+id/imageTamanho"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
 </LinearLayout>

@@ -1,5 +1,7 @@
 package fga.unb.desenho20162.lavajato.model;
 
+import fga.unb.desenho20162.lavajato.R;
+
 public class LavagemModel {
 
     public LavagemModel() {
@@ -26,6 +28,7 @@ public class LavagemModel {
     private String cor;
     private String marca;
     private String modelo;
+    private String tipoLavagem = "AMERICANA";
 
     public String getNome() {
         return nome;
@@ -43,8 +46,21 @@ public class LavagemModel {
         this.telefone = telefone;
     }
 
-    public String getTamanho() {
-        return tamanho;
+    public int getTamanho() {
+
+        switch (tamanho) {
+            case "Pequeno":
+
+                return R.drawable.pequeno;
+            case "SUV":
+
+                return R.drawable.suv;
+            case "Caminhonete":
+
+                return R.drawable.caminhonete;
+        }
+
+        return 0;
     }
 
     public void setTamanho(String tamanho) {
@@ -81,5 +97,13 @@ public class LavagemModel {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public String getTipoLavagem () {
+        return tipoLavagem;
+    }
+
+    public void setTipoLavagem ( String tipoLavagem ) {
+        this.tipoLavagem = tipoLavagem;
     }
 }

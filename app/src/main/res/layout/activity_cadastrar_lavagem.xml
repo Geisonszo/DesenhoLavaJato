@@ -17,66 +17,68 @@
 
         <TextView
             android:text="Cliente"
-            android:layout_width="match_parent"
+            android:layout_width="99dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:textSize="24sp"
+            android:id="@+id/nome_cliente"
+            android:textColor="@color/bodyTextColor"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Nome"
+            android:hint="Nome"
             android:ems="10"
             android:id="@+id/nomeCliente"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/textView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             tools:ignore="HardcodedText"
-            tools:inputType="textCapCharacters" />
+            tools:inputType="textPersonName" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Telefone"
+            android:hint="Telefone"
             android:ems="10"
             android:id="@+id/telefoneCliente"
             android:layout_below="@+id/nomeCliente"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            tools:ignore="HardcodedText"
             tools:inputType="phone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            />
 
         <TextView
             android:text="Veículo"
-            android:layout_width="match_parent"
+            android:layout_width="99dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/textView2"
             android:layout_below="@+id/telefoneCliente"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:textSize="24sp"
+            android:textColor="@color/bodyTextColor"/>
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="174dp"
             android:layout_height="wrap_content"
-            android:id="@+id/tamanhoVeiculo"
-            android:layout_marginTop="15dp"
+            android:id="@+id/tipoVeiculo"
             android:layout_below="@+id/textView2"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:ems="10"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Placa"
+            android:hint="Placa"
             android:ems="10"
             android:id="@+id/placaVeiculo" />
 
@@ -84,11 +86,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Cor"
+            android:hint="Cor"
             android:ems="10"
-            android:layout_marginTop="11dp"
             android:id="@+id/corVeiculo"
-            android:layout_below="@+id/tamanhoVeiculo"
+            android:layout_below="@+id/tipoVeiculo"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             tools:ignore="HardcodedText" />
@@ -97,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Marca"
+            android:hint="Marca"
             android:ems="10"
             android:id="@+id/marcaVeiculo"
             android:layout_below="@+id/corVeiculo"
@@ -108,7 +109,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Modelo"
+            android:hint="Modelo"
             android:ems="10"
             android:id="@+id/modeloVeiculo"
             android:layout_below="@+id/marcaVeiculo"
@@ -126,48 +127,51 @@
             android:layout_above="@+id/tipoLavagem"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="22dp" />
+            android:textColor="@color/bodyTextColor"
+            android:textSize="24sp"/>
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="184dp"
             android:layout_height="wrap_content"
             android:id="@+id/tipoLavagem"
-            android:layout_marginBottom="24dp"
+            android:ems="10"
             android:layout_above="@+id/buttonCancelar"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="18dp"
+            android:layout_toLeftOf="@+id/buttonCancelar"
+            android:layout_toStartOf="@+id/buttonCancelar"/>
 
     </LinearLayout>
 
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <Button
-            android:text="cadastrar"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="11dp"
-            android:id="@+id/buttonCandastrar"
-            tools:ignore="RelativeOverlap"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/buttonCancelar"
-            android:layout_toStartOf="@+id/buttonCancelar"
-            android:layout_marginRight="21dp"
-            android:layout_marginEnd="21dp" />
-
-        <Button
             android:text="Cancelar"
-            android:layout_width="157dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonCancelar"
             tools:ignore="HardcodedText"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/buttonCandastrar"/>
+
+        <Button
+            android:text="cadastrar"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCandastrar"
+            tools:ignore="RelativeOverlap"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="175dp"/>
 
     </RelativeLayout>
 

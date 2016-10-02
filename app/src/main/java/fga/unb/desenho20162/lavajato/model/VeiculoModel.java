@@ -2,7 +2,7 @@ package fga.unb.desenho20162.lavajato.model;
 
 public class VeiculoModel {
 
-    private String tamanho;
+    private String tipo;
     private String placa;
     private String cor;
     private String marca;
@@ -10,18 +10,18 @@ public class VeiculoModel {
 
     public VeiculoModel() {}
 
-    public VeiculoModel(String tamanho, String placa, String cor, String marca, String modelo) {
+    public VeiculoModel(String tipo, String placa, String cor, String marca, String modelo) {
 
-        setTamanho(tamanho);
-        setPlaca(placa);
-        setCor(cor);
-        setMarca(marca);
-        setModelo(modelo);
+        this.tipo = tipo;
+        this.placa = placa;
+        this.cor = cor;
+        this.marca = marca;
+        this.modelo = modelo;
     }
 
-    public void setTamanho(String tamanho) {
+    public void setTipo(String tipo) {
 
-        this.tamanho = tamanho;
+        this.tipo = tipo;
     }
 
     private void setPlaca(String placa) {
@@ -45,9 +45,9 @@ public class VeiculoModel {
     }
 
 
-    public String getTamanho() {
+    public String getTipo() {
 
-        return tamanho;
+        return tipo;
     }
 
     public String getPlaca() {

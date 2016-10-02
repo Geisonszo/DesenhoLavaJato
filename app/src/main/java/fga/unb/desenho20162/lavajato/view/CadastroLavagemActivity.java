@@ -4,25 +4,26 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.*;
 
-import fga.unb.desenho20162.lavajato.Controller.CadastrarLavagemController;
+import fga.unb.desenho20162.lavajato.Controller.CadastroLavagemController;
 import fga.unb.desenho20162.lavajato.R;
 
 public class CadastroLavagemActivity extends AppCompatActivity {
 
-    private CadastrarLavagemController cadastro = new CadastrarLavagemController();
+    private CadastroLavagemController cadastroLavagem = new CadastroLavagemController();
 
     private EditText nome;
     private EditText telefone;
-    private Spinner tamanho;
+    private Spinner tipo;
     private EditText placa;
     private EditText cor;
     private EditText marca;
     private EditText modelo;
     private Spinner tipoLavagem;
-    private ArrayAdapter<String> adapterTamanho;
+    private ArrayAdapter<String> adapterTipo;
     private ArrayAdapter<String> adapterTipoLavagem;
 
     Button btnCadastrar;
@@ -36,29 +37,37 @@ public class CadastroLavagemActivity extends AppCompatActivity {
 
         nome = (EditText) findViewById(R.id.nomeCliente);
         telefone = (EditText) findViewById(R.id.telefoneCliente);
-        tamanho = (Spinner) findViewById(R.id.tamanhoVeiculo);
+        tipo = (Spinner) findViewById(R.id.tipoVeiculo);
         placa = (EditText) findViewById(R.id.placaVeiculo);
         cor = (EditText) findViewById(R.id.corVeiculo);
         marca = (EditText) findViewById(R.id.marcaVeiculo);
         modelo = (EditText) findViewById(R.id.modeloVeiculo);
         tipoLavagem = (Spinner) findViewById(R.id.tipoLavagem);
 
-        adapterTamanho = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
-        adapterTamanho.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        nome.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        cor.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        marca.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        modelo.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        placa.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+
+
+        adapterTipo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        adapterTipo.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 
         adapterTipoLavagem = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
         adapterTipoLavagem.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 
-        tamanho.setAdapter(adapterTamanho);
+        tipo.setAdapter(adapterTipo);
         tipoLavagem.setAdapter(adapterTipoLavagem);
 
-        adapterTamanho.add("Pequeno");
-        adapterTamanho.add("SUV");
-        adapterTamanho.add("Caminhonete");
+        adapterTipo.add("PEQUENO");
+        adapterTipo.add("SUV");
+        adapterTipo.add("CAMINHONETE");
+        adapterTipo.add("MOTO");
 
-        adapterTipoLavagem.add("Simples");
-        adapterTipoLavagem.add("Americana");
-        adapterTipoLavagem.add("Motor");
+        adapterTipoLavagem.add("PINTURA");
+        adapterTipoLavagem.add("AMERICANA");
+        adapterTipoLavagem.add("MOTOR");
 
         btnCadastrar = (Button) this.findViewById(R.id.buttonCandastrar);
 
@@ -66,13 +75,11 @@ public class CadastroLavagemActivity extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                cadastro.cadastrar(nome.getEditableText().toString(),
-                        telefone.getEditableText().toString(),
-                        tamanho.getSelectedItem().toString(),
-                        placa.getEditableText().toString(),
-                        cor.getEditableText().toString(),
-                        marca.getEditableText().toString(),
-                        modelo.getEditableText().toString());
+                cadastroLavagem.setLavagem(nome.getEditableText().toString(),
+                        telefone.getEditableText().toString(), tipo.getSelectedItem().toString(),
+                        placa.getEditableText().toString(), cor.getEditableText().toString(),
+                        marca.getEditableText().toString(), modelo.getEditableText().toString(),
+                        tipoLavagem.getSelectedItem().toString());
 
                 Intent listarLavagem = new Intent();
                 listarLavagem.setClass(CadastroLavagemActivity.this, ListaLavagensActivity.class);

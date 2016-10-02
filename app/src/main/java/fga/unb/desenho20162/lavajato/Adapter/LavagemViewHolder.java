@@ -8,13 +8,11 @@ import android.widget.TextView;
 
 import fga.unb.desenho20162.lavajato.R;
 
-import static fga.unb.desenho20162.lavajato.R.drawable.pequeno;
-
 public class LavagemViewHolder extends RecyclerView.ViewHolder{
 
     TextView nome;
     TextView telefone;
-    ImageView tamanho;
+    ImageView tipo;
     TextView placa;
     TextView cor;
     TextView marca;
@@ -26,11 +24,11 @@ public class LavagemViewHolder extends RecyclerView.ViewHolder{
 
         nome = (TextView) itemView.findViewById(R.id.idNome);
         telefone = (TextView) itemView.findViewById(R.id.idTelefone);
-        tamanho = (ImageView) itemView.findViewById(R.id.imageTamanho);
+        tipo = (ImageView) itemView.findViewById(R.id.imageTipo);
         placa = (TextView) itemView.findViewById(R.id.idPlaca);
         cor = (TextView) itemView.findViewById(R.id.idCor);
         marca = (TextView) itemView.findViewById(R.id.idMarca);
         modelo = (TextView) itemView.findViewById(R.id.idModelo);
-        tipoLavagem = (TextView) itemView.findViewById(R.id.idTipolavagem);
+        tipoLavagem = (TextView) itemView.findViewById(R.id.idTipoLavagem);
     }
 }

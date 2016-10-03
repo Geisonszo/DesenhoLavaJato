@@ -1,6 +1,6 @@
 package fga.unb.desenho20162.lavajato.model;
 
-public class FuncionarioModel {
+public class Funcionario {
 
     private String nome;
     private String cpf;
@@ -9,11 +9,11 @@ public class FuncionarioModel {
     private String telefone;
     private String endereco;
 
-    public FuncionarioModel () {
+    public Funcionario () {
 
     }
 
-    public FuncionarioModel ( String nome, String cpf, char sexo, float diaria, String telefone, String endereco ) {
+    public Funcionario ( String nome, String cpf, char sexo, float diaria, String telefone, String endereco ) {
         this.nome = nome;
         this.cpf = cpf;
         this.sexo = sexo;

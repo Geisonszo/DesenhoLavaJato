@@ -2,9 +2,9 @@ package fga.unb.desenho20162.lavajato.DAO;
 
 import com.google.firebase.database.DatabaseReference;
 
-import fga.unb.desenho20162.lavajato.model.ClienteModel;
+import fga.unb.desenho20162.lavajato.model.Cliente;
 import fga.unb.desenho20162.lavajato.model.TipoLavagemModel;
-import fga.unb.desenho20162.lavajato.model.VeiculoModel;
+import fga.unb.desenho20162.lavajato.model.Veiculo;
 
 public class LavagemDAO {
 
@@ -16,7 +16,7 @@ public class LavagemDAO {
 
     }
 
-   public void saveLavagemFirebase(ClienteModel cliente, VeiculoModel veiculo, TipoLavagemModel tipoLavagem) {
+   public void saveLavagemFirebase( Cliente cliente, Veiculo veiculo, TipoLavagemModel tipoLavagem) {
 
        firebaseRef.child("nome").setValue(cliente.getNome());
        firebaseRef.child("telefone").setValue(cliente.getTelefone());

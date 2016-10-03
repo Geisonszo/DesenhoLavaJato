@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fga.unb.desenho20162.lavajato">
+          package="fga.unb.desenho20162.lavajato">
 
     <user-permission android:name="android.permission.INTERNET"/>
 
@@ -11,15 +11,19 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="fga.unb.desenho20162.lavajato.view.MainActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="fga.unb.desenho20162.lavajato.view.ListaLavagensActivity" />
-        <activity android:name="fga.unb.desenho20162.lavajato.view.CadastroLavagemActivity"></activity>
+        <activity android:name=".view.ListaLavagensActivity"/>
+        <activity android:name=".view.CadastroLavagemActivity"/>
+        <activity android:name=".view.ListaFuncionarioActivity">
+        </activity>
+        <activity android:name=".view.CadastroFuncionarioActivity">
+        </activity>
     </application>
 
 </manifest>

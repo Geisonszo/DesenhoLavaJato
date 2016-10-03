@@ -2,7 +2,7 @@ package fga.unb.desenho20162.lavajato.model;
 
 import fga.unb.desenho20162.lavajato.R;
 
-public class LavagemModel {
+public class OrdemLavagem {
 
     private String nome;
     private String telefone;
@@ -12,13 +12,15 @@ public class LavagemModel {
     private String marca;
     private String modelo;
     private String tipo_lavagem;
+    private String descricao;
+    private float valor;
 
-    public LavagemModel() {
-
+    public OrdemLavagem () {
     }
 
-    public LavagemModel(String nome, String telefone, String tipo, String placa, String cor,
-                        String marca, String modelo, String tipo_lavagem) {
+    public OrdemLavagem ( String nome, String telefone, String tipo, String placa, String cor,
+                          String marca, String modelo, String tipo_lavagem, String descricao,
+                          float valor ) {
 
         this.nome = nome;
         this.telefone = telefone;
@@ -28,6 +30,8 @@ public class LavagemModel {
         this.marca = marca;
         this.modelo = modelo;
         this.tipo_lavagem = tipo_lavagem;
+        this.descricao = descricao;
+        this.valor = valor;
     }
 
     public String getNome() {
@@ -108,5 +112,21 @@ public class LavagemModel {
 
     public void setTipo_lavagem ( String tipoLavagem ) {
         this.tipo_lavagem = tipoLavagem;
+    }
+
+    public String getDescricao () {
+        return descricao;
+    }
+
+    public void setDescricao ( String descricao ) {
+        this.descricao = descricao;
+    }
+
+    public float getValor () {
+        return valor;
+    }
+
+    public void setValor ( float valor ) {
+        this.valor = valor;
     }
 }

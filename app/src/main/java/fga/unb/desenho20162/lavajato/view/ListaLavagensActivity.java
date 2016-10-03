@@ -13,7 +13,8 @@ import fga.unb.desenho20162.lavajato.Adapter.LavagemRecyclerAdapter;
 import fga.unb.desenho20162.lavajato.Adapter.LavagemViewHolder;
 import fga.unb.desenho20162.lavajato.DAO.DatabaseConnection;
 import fga.unb.desenho20162.lavajato.R;
-import fga.unb.desenho20162.lavajato.model.LavagemModel;
+import fga.unb.desenho20162.lavajato.model.Lavagem;
+import fga.unb.desenho20162.lavajato.model.OrdemLavagem;
 
 public class ListaLavagensActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class ListaLavagensActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new LavagemRecyclerAdapter(LavagemModel.class, R.layout.item_lavagem, LavagemViewHolder.class, firebaseRef);
+        adapter = new LavagemRecyclerAdapter(OrdemLavagem.class, R.layout.item_lavagem, LavagemViewHolder.class, firebaseRef);
 
         recyclerView.setAdapter(adapter);
     }

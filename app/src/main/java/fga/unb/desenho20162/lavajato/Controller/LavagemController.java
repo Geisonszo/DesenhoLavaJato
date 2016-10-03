@@ -1,15 +1,15 @@
 package fga.unb.desenho20162.lavajato.Controller;
 
 import fga.unb.desenho20162.lavajato.DAO.LavagemDAO;
-import fga.unb.desenho20162.lavajato.model.ClienteModel;
+import fga.unb.desenho20162.lavajato.model.Cliente;
 import fga.unb.desenho20162.lavajato.model.TipoLavagemModel;
-import fga.unb.desenho20162.lavajato.model.VeiculoModel;
+import fga.unb.desenho20162.lavajato.model.Veiculo;
 
 
-public class CadastroLavagemController {
+public class LavagemController {
 
-    private ClienteModel cliente;
-    private VeiculoModel veiculo;
+    private Cliente cliente;
+    private Veiculo veiculo;
     private TipoLavagemModel lavagem;
 
     private LavagemDAO novaLavagem;
@@ -19,8 +19,8 @@ public class CadastroLavagemController {
 
         float valor = 0;
 
-        cliente = new ClienteModel(nome, telefone);
-        veiculo = new VeiculoModel(tipo, placa, cor, marca, modelo);
+        cliente = new Cliente(nome, telefone);
+        veiculo = new Veiculo(tipo, placa, cor, marca, modelo);
 
         if (tipo_lavagem.equals("PINTURA") && tipo.equals("PEQUENO")) {
 
@@ -50,11 +50,11 @@ public class CadastroLavagemController {
         salvarLavagem(cliente, veiculo, lavagem);
     }
 
-    private void salvarLavagem(ClienteModel clienteModel, VeiculoModel veiculoModel,
-                               TipoLavagemModel tipoLavagem) {
+    private void salvarLavagem( Cliente cliente, Veiculo veiculo,
+                                TipoLavagemModel tipoLavagem) {
 
         novaLavagem = new LavagemDAO();
 
-        novaLavagem.saveLavagemFirebase(clienteModel, veiculoModel, tipoLavagem);
+        novaLavagem.saveLavagemFirebase(cliente, veiculo, tipoLavagem);
     }
 }

@@ -1,6 +1,6 @@
 package fga.unb.desenho20162.lavajato.model;
 
-public class VeiculoModel {
+public class Veiculo {
 
     private String tipo;
     private String placa;
@@ -8,9 +8,9 @@ public class VeiculoModel {
     private String marca;
     private String modelo;
 
-    public VeiculoModel() {}
+    public Veiculo () {}
 
-    public VeiculoModel(String tipo, String placa, String cor, String marca, String modelo) {
+    public Veiculo ( String tipo, String placa, String cor, String marca, String modelo) {
 
         this.tipo = tipo;
         this.placa = placa;

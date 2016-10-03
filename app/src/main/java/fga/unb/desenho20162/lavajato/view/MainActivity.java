@@ -20,4 +20,10 @@ public class MainActivity extends AppCompatActivity {
         Intent listarLavagens = new Intent(this, ListaLavagensActivity.class);
         startActivity(listarLavagens);
     }
+
+    public void listarFuncionarios(View view) {
+
+        Intent listarFuncionarios = new Intent(this, ListaFuncionarioActivity.class);
+        startActivity(listarFuncionarios);
+    }
 }

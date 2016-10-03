@@ -1,13 +1,13 @@
 package fga.unb.desenho20162.lavajato.model;
 
-public class ClienteModel {
+public class Cliente {
 
     private String nome;
     private String telefone;
 
-    public ClienteModel() {}
+    public Cliente () {}
 
-    public ClienteModel(String nome, String telefone) {
+    public Cliente ( String nome, String telefone) {
 
         setNome(nome);
         setTelefone(telefone);

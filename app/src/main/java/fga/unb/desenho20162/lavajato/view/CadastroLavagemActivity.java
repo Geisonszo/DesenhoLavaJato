@@ -8,12 +8,12 @@ import android.text.InputFilter;
 import android.view.View;
 import android.widget.*;
 
-import fga.unb.desenho20162.lavajato.Controller.CadastroLavagemController;
+import fga.unb.desenho20162.lavajato.Controller.LavagemController;
 import fga.unb.desenho20162.lavajato.R;
 
 public class CadastroLavagemActivity extends AppCompatActivity {
 
-    private CadastroLavagemController cadastroLavagem = new CadastroLavagemController();
+    private LavagemController cadastroLavagem = new LavagemController();
 
     private EditText nome;
     private EditText telefone;

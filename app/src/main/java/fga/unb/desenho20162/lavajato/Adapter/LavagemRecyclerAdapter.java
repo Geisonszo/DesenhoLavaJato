@@ -3,17 +3,18 @@ package fga.unb.desenho20162.lavajato.Adapter;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.Query;
 
-import fga.unb.desenho20162.lavajato.model.LavagemModel;
+import fga.unb.desenho20162.lavajato.model.OrdemLavagem;
 
-public class LavagemRecyclerAdapter extends FirebaseRecyclerAdapter <LavagemModel, LavagemViewHolder> {
+public class LavagemRecyclerAdapter extends FirebaseRecyclerAdapter <OrdemLavagem, LavagemViewHolder> {
 
-    public LavagemRecyclerAdapter(Class<LavagemModel> modelClass, int modelLayout, Class<LavagemViewHolder> viewHolderClass, Query ref) {
+    public LavagemRecyclerAdapter(Class<OrdemLavagem> modelClass, int modelLayout,
+                                  Class<LavagemViewHolder> viewHolderClass, Query ref) {
 
         super(modelClass, modelLayout, viewHolderClass, ref);
     }
 
     @Override
-    protected void populateViewHolder ( LavagemViewHolder viewHolder, LavagemModel model, int position ) {
+    protected void populateViewHolder ( LavagemViewHolder viewHolder, OrdemLavagem model, int position ) {
 
         viewHolder.nome.setText(model.getNome());
         viewHolder.telefone.setText(model.getTelefone());

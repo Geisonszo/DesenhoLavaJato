@@ -1,6 +1,6 @@
 package fga.unb.desenho20162.lavajato.model;
 
-public class PontoModel {
+public class Ponto {
 
     private String data;
     private String pontoDia;

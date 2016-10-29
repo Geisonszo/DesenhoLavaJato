@@ -17,9 +17,9 @@ public class FuncionarioRecyclerAdapter extends FirebaseRecyclerAdapter<Funciona
     protected void populateViewHolder ( FuncionarioViewHolder viewHolder, Funcionario model, int position ) {
 
         viewHolder.nome.setText(model.getNome());
-        viewHolder.cpf.setText(model.getCpf());
-        viewHolder.sexo.setText(model.getSexo());
-        viewHolder.diaria.setText((int) model.getDiaria());
-        viewHolder.endereco.setText(model.getEndereco());
+        //viewHolder.cpf.setText(model.getCpf());
+        viewHolder.telefone.setText(model.getTelefone());
+        //viewHolder.tipoTelefone.setText(model.getTipoTelefone());
+        //viewHolder.endereco.setText(model.getEndereco());
     }
 }

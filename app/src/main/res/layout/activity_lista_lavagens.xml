@@ -17,7 +17,7 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
         android:clickable="true"
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fl_add_bt_lavagem"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"

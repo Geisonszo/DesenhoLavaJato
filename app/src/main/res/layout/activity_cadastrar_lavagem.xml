@@ -19,9 +19,6 @@
             android:text="Cliente"
             android:layout_width="99dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             tools:ignore="HardcodedText"
             android:textSize="24sp"
             android:id="@+id/nome_cliente"
@@ -34,9 +31,6 @@
             android:hint="Nome"
             android:ems="10"
             android:id="@+id/nomeCliente"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             tools:ignore="HardcodedText"
             tools:inputType="textPersonName" />
 
@@ -46,9 +40,6 @@
             android:hint="Telefone"
             android:ems="10"
             android:id="@+id/telefoneCliente"
-            android:layout_below="@+id/nomeCliente"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             tools:inputType="phone"
             android:inputType="phone"
             />
@@ -58,9 +49,6 @@
             android:layout_width="99dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/telefoneCliente"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             tools:ignore="HardcodedText"
             android:textSize="24sp"
             android:textColor="@color/bodyTextColor"/>
@@ -69,9 +57,6 @@
             android:layout_width="174dp"
             android:layout_height="wrap_content"
             android:id="@+id/tipoVeiculo"
-            android:layout_below="@+id/textView2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:ems="10"/>
 
         <EditText
@@ -89,9 +74,6 @@
             android:hint="Cor"
             android:ems="10"
             android:id="@+id/corVeiculo"
-            android:layout_below="@+id/tipoVeiculo"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             tools:ignore="HardcodedText" />
 
         <EditText
@@ -101,9 +83,6 @@
             android:hint="Marca"
             android:ems="10"
             android:id="@+id/marcaVeiculo"
-            android:layout_below="@+id/corVeiculo"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             tools:ignore="HardcodedText" />
 
         <EditText
@@ -112,9 +91,6 @@
             android:hint="Modelo"
             android:ems="10"
             android:id="@+id/modeloVeiculo"
-            android:layout_below="@+id/marcaVeiculo"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             tools:ignore="HardcodedText"
             android:inputType="text" />
 
@@ -124,9 +100,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             tools:ignore="HardcodedText"
-            android:layout_above="@+id/tipoLavagem"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:textColor="@color/bodyTextColor"
             android:textSize="24sp"/>
 
@@ -135,12 +108,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/tipoLavagem"
             android:ems="10"
-            android:layout_above="@+id/buttonCancelar"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_marginBottom="18dp"
-            android:layout_toLeftOf="@+id/buttonCancelar"
-            android:layout_toStartOf="@+id/buttonCancelar"/>
+            />
 
     </LinearLayout>
 

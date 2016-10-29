@@ -4,22 +4,24 @@ public class Funcionario {
 
     private String nome;
     private String cpf;
-    private char sexo;
-    private float diaria;
+    private String sexo;
+    private double diaria;
     private String telefone;
+    private String tipoTelefone;
     private String endereco;
 
     public Funcionario () {
 
     }
 
-    public Funcionario ( String nome, String cpf, char sexo, float diaria, String telefone, String endereco ) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.sexo = sexo;
-        this.diaria = diaria;
-        this.telefone = telefone;
-        this.endereco = endereco;
+    public Funcionario ( String nome, String cpf, String sexo, double diaria, String telefone, String tipoTelefone, String endereco ) {
+
+        this.setNome(nome);
+        this.setCpf(cpf);
+        this.setSexo(sexo);
+        this.setDiaria(diaria);
+        this.setTelefone(telefone);
+        this.setEndereco(endereco);
     }
 
     public void setNome( String nome) {
@@ -30,16 +32,20 @@ public class Funcionario {
         this.cpf = cpf;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
-    public void setDiaria(float diaria) {
+    public void setDiaria(double diaria) {
         this.diaria = diaria;
     }
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public void setTipoTelefone ( String tipoTelefone ) {
+        this.tipoTelefone = tipoTelefone;
     }
 
     public void setEndereco(String endereco) {
@@ -54,11 +60,11 @@ public class Funcionario {
         return cpf;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public float getDiaria() {
+    public double getDiaria() {
         return diaria;
     }
 
@@ -68,5 +74,9 @@ public class Funcionario {
 
     public String getEndereco() {
         return endereco;
+    }
+
+    public String getTipoTelefone () {
+        return tipoTelefone;
     }
 }

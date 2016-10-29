@@ -9,21 +9,18 @@ import fga.unb.desenho20162.lavajato.R;
 public class FuncionarioViewHolder extends RecyclerView.ViewHolder {
 
     TextView nome;
-    TextView cpf;
+    /*TextView cpf;
     TextView sexo;
-    TextView diaria;
+    TextView diaria;*/
     TextView telefone;
-    TextView endereco;
+    //TextView tipoTelefone;
+    //TextView endereco;
 
     public FuncionarioViewHolder ( View itemView ) {
         super(itemView);
 
-        nome = (TextView) itemView.findViewById(R.id.idNome);
-        telefone = (TextView) itemView.findViewById(R.id.idTelefone);
-        cpf = (TextView) itemView.findViewById(R.id.idPlaca);
-        sexo = (TextView) itemView.findViewById(R.id.idCor);
-        diaria = (TextView) itemView.findViewById(R.id.idMarca);
-        telefone = (TextView) itemView.findViewById(R.id.idModelo);
-        endereco = (TextView) itemView.findViewById(R.id.idTipoLavagem);
+        nome = (TextView) itemView.findViewById(R.id.item_nome_funcionario);
+        telefone = (TextView) itemView.findViewById(R.id.item_telefone_funcionario);
+        //cpf = (TextView) itemView.findViewById(R.id.)
     }
 }

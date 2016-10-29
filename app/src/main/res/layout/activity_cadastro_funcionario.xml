@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_cadastro_funcionario"
     android:layout_width="match_parent"
@@ -11,101 +12,179 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fga.unb.desenho20162.lavajato.view.CadastroFuncionarioActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
+        android:text="Ficha de cadastro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/FICHA_FUNCIONARIO"
+        android:textSize="30sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"/>
 
-        <TextView
-            android:text="Dados do funcionario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/idFuncionario"
-            android:textSize="30sp"/>
+    <ImageView
+        app:srcCompat="@drawable/com_facebook_profile_picture_blank_portrait"
+        android:id="@+id/id_foto_func"
+        android:layout_below="@+id/FICHA_FUNCIONARIO"
+        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="120dp"/>
 
-        <EditText
-            android:layout_width="275dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Nome"
-            android:ems="10"
-            tools:ignore="HardcodedText"
-            tools:inputType="textPersonName"
-            android:id="@+id/nomeFuncionario"/>
-
-        <EditText
-            android:layout_width="276dp"
-            android:layout_height="wrap_content"
-            android:hint="Telefone"
-            android:ems="10"
-            tools:inputType="phone"
-            android:inputType="phone"
-            android:id="@+id/telefoneFuncionario"/>
-
-        <EditText
-            android:layout_width="278dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="CPF"
-            android:ems="10"
-            android:id="@+id/cpfFuncionario"
-            tools:ignore="HardcodedText"
-            tools:inputType="textPersonName" />
-
-        <TextView
-            android:text="Sexo"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView5"
-            android:textSize="18sp"/>
-
-        <Spinner
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/sexoFuncionario"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Endereco"
-            android:ems="10"
-            android:id="@+id/enderecoFuncionario"
-            tools:ignore="HardcodedText"
-            tools:inputType="textPersonName" />
-
-    </LinearLayout>
-
-    <RelativeLayout
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Nome completo"
+        android:ems="10"
+        tools:ignore="HardcodedText"
+        tools:inputType="textPersonName"
+        android:id="@+id/id_nome_func"
+        android:layout_below="@+id/id_foto_func"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
-        <Button
-            android:text="Cadastrar"
-            android:layout_height="wrap_content"
-            android:id="@+id/buttonCandastrarFuncionario"
-            tools:ignore="RelativeOverlap"
-            android:layout_width="175dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="41dp"
-            android:layout_toLeftOf="@+id/buttonCancelar"
-            android:layout_toStartOf="@+id/buttonCancelar"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_tipo_tel_func"
+        android:layout_toRightOf="@+id/id_telefone_func"
+        android:layout_alignBottom="@+id/id_telefone_func"
+        android:layout_below="@+id/id_nome_func"/>
 
-        <Button
-            android:text="Cancelar"
-            android:layout_width="175dp"
+    <TextView
+        android:text="Sexo"
+        android:id="@+id/SEXO_FUNCIONARIO"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/id_telefone_func"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:hint="Telefone"
+        android:ems="10"
+        tools:inputType="phone"
+        android:inputType="phone"
+        android:id="@+id/id_telefone_func"
+        android:layout_width="240dp"
+        android:layout_below="@+id/id_nome_func"
+        android:layout_alignRight="@+id/id_cpf_func"
+        android:layout_alignEnd="@+id/id_cpf_func"/>
+
+    <Button
+        android:text="Cancelar"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_cancelar_func"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@+id/bt_cadastrar_func"
+        android:layout_toRightOf="@+id/bt_cadastrar_func"/>
+
+    <EditText
+        android:layout_height="40dp"
+        android:hint="CPF"
+        android:ems="10"
+        android:id="@+id/id_cpf_func"
+        tools:ignore="HardcodedText"
+        tools:inputType="textPersonName"
+        android:inputType="number"
+        android:layout_below="@+id/radio_group_sexo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="170dp"/>
+
+    <RadioGroup
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:id="@+id/radio_group_sexo"
+        android:layout_below="@+id/SEXO_FUNCIONARIO"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:text="Masculino"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonCancelar"
-            tools:ignore="HardcodedText"
-            android:layout_alignBaseline="@+id/buttonCandastrarFuncionario"
-            android:layout_alignBottom="@+id/buttonCandastrarFuncionario"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
+            android:id="@+id/id_radio_maculino"
+            />
+
+        <RadioButton
+            android:text="Feminino"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_radio_feminino"
+            />
+
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:hint="Endereco"
+        android:ems="10"
+        android:id="@+id/id_endereco_func"
+        tools:ignore="HardcodedText"
+        tools:inputType="textPersonName"
+        android:layout_below="@+id/id_cpf_func"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="RG"
+        android:ems="10"
+        android:id="@+id/id_identidade_func"
+        android:layout_above="@+id/id_endereco_func"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="150dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/id_endereco_func"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="R$"
+        android:id="@+id/id_diaria_func"/>
+
+    <TextView
+        android:text="Valor diaria"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/bt_cadastrar_func"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/id_foto_func"
+        android:textSize="18sp"
+        android:layout_below="@+id/id_endereco_func"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/id_foto_func"
+        android:id="@+id/VALOR_DIARIA"/>
+
+    <Button
+        android:text="Cadastrar"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_cadastrar_func"
+        android:checkedButton="@+id/Sexo"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/id_cpf_func"
+        android:layout_alignEnd="@+id/id_cpf_func"/>
 
 </RelativeLayout>

@@ -13,7 +13,6 @@ import fga.unb.desenho20162.lavajato.Adapter.LavagemRecyclerAdapter;
 import fga.unb.desenho20162.lavajato.Adapter.LavagemViewHolder;
 import fga.unb.desenho20162.lavajato.DAO.DatabaseConnection;
 import fga.unb.desenho20162.lavajato.R;
-import fga.unb.desenho20162.lavajato.model.Lavagem;
 import fga.unb.desenho20162.lavajato.model.OrdemLavagem;
 
 public class ListaLavagensActivity extends AppCompatActivity {

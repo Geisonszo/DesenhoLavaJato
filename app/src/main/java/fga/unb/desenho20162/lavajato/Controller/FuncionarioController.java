@@ -1,7 +1,7 @@
 package fga.unb.desenho20162.lavajato.Controller;
 
 import fga.unb.desenho20162.lavajato.DAO.FuncionarioDAO;
-import fga.unb.desenho20162.lavajato.model.Funcionario;
+import fga.unb.desenho20162.lavajato.Model.Funcionario;
 
 public class FuncionarioController {
 
@@ -16,6 +16,6 @@ public class FuncionarioController {
 
         FuncionarioDAO novoFuncionario = new FuncionarioDAO();
 
-        novoFuncionario.saveFuncionarioFirebase(funcionario);
+        novoFuncionario.createFuncionario(funcionario);
     }
 }

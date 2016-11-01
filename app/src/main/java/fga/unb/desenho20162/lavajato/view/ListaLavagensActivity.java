@@ -11,16 +11,16 @@ import com.google.firebase.database.DatabaseReference;
 
 import fga.unb.desenho20162.lavajato.Adapter.LavagemRecyclerAdapter;
 import fga.unb.desenho20162.lavajato.Adapter.LavagemViewHolder;
-import fga.unb.desenho20162.lavajato.DAO.DatabaseConnection;
+import fga.unb.desenho20162.lavajato.DAO.FactoryConnection;
 import fga.unb.desenho20162.lavajato.R;
-import fga.unb.desenho20162.lavajato.model.OrdemLavagem;
+import fga.unb.desenho20162.lavajato.Model.OrdemLavagem;
 
 public class ListaLavagensActivity extends AppCompatActivity {
 
     private LavagemRecyclerAdapter adapter;
-    final private DatabaseConnection databaseConnection = new DatabaseConnection();
+    final private FactoryConnection factoryConnection = new FactoryConnection();
 
-    private DatabaseReference firebaseRef = databaseConnection.getFirebase().child("Lavagem");
+    private DatabaseReference firebaseRef = factoryConnection.getConnection().child("Lavagem");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,15 +3,13 @@ package fga.unb.desenho20162.lavajato.DAO;
 
 import com.google.firebase.database.DatabaseReference;
 
-import fga.unb.desenho20162.lavajato.model.Funcionario;
+import fga.unb.desenho20162.lavajato.Model.Funcionario;
 
 public class FuncionarioDAO {
 
-    final private DatabaseConnection databaseConnection = new DatabaseConnection();
+    public void createFuncionario( Funcionario funcionario) {
 
-    private DatabaseReference firebaseRef = databaseConnection.getFirebase().child("Funcionario").push();
-
-    public void saveFuncionarioFirebase( Funcionario funcionario) {
+        DatabaseReference firebaseRef = connectToDB();
 
         firebaseRef.child("nome").setValue(funcionario.getNome());
         firebaseRef.child("sexo").setValue(funcionario.getSexo());
@@ -21,4 +19,13 @@ public class FuncionarioDAO {
         firebaseRef.child("diaria").setValue(funcionario.getDiaria());
         firebaseRef.child("endereco").setValue(funcionario.getEndereco());
     }
+
+    private DatabaseReference connectToDB() {
+
+        FactoryConnection factoryConnection = FactoryConnection.getInstance();
+
+        return factoryConnection.getConnection().child("Funcionario").push();
+    }
+
+
 }

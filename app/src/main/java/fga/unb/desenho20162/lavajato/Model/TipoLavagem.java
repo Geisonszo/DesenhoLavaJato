@@ -1,17 +1,17 @@
-package fga.unb.desenho20162.lavajato.model;
+package fga.unb.desenho20162.lavajato.Model;
 
 public class TipoLavagem {
 
     private double valor;
-    private String tipo_lavagem;
+    private String descricao;
 
     public TipoLavagem () {
 
     }
 
-    public TipoLavagem ( String tipo_lavagem, double valor) {
+    public TipoLavagem ( String descricao, double valor) {
 
-        this.tipo_lavagem = tipo_lavagem;
+        this.descricao = descricao;
         this.valor = valor;
     }
 
@@ -20,7 +20,7 @@ public class TipoLavagem {
     }
 
     public void setTipo_lavagem(String descricao) {
-        this.tipo_lavagem = descricao;
+        this.descricao = descricao;
     }
 
     public double getValor() {
@@ -28,6 +28,6 @@ public class TipoLavagem {
     }
 
     public String getTipo_lavagem() {
-        return tipo_lavagem;
+        return descricao;
     }
 }

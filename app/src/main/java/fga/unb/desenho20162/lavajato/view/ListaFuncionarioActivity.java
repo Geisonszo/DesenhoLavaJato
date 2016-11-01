@@ -11,16 +11,16 @@ import com.google.firebase.database.DatabaseReference;
 
 import fga.unb.desenho20162.lavajato.Adapter.FuncionarioRecyclerAdapter;
 import fga.unb.desenho20162.lavajato.Adapter.FuncionarioViewHolder;
-import fga.unb.desenho20162.lavajato.DAO.DatabaseConnection;
+import fga.unb.desenho20162.lavajato.DAO.FactoryConnection;
 import fga.unb.desenho20162.lavajato.R;
-import fga.unb.desenho20162.lavajato.model.Funcionario;
+import fga.unb.desenho20162.lavajato.Model.Funcionario;
 
 public class ListaFuncionarioActivity extends AppCompatActivity {
 
     private FuncionarioRecyclerAdapter adapter;
-    final private DatabaseConnection databaseConnection = new DatabaseConnection();
+    final private FactoryConnection factoryConnection = new FactoryConnection();
 
-    private final DatabaseReference firebaseRef = databaseConnection.getFirebase().child("Funcionario");
+    private final DatabaseReference firebaseRef = factoryConnection.getConnection().child("Funcionario");
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {

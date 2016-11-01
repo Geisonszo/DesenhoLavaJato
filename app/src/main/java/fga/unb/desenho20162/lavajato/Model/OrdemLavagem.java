@@ -1,4 +1,4 @@
-package fga.unb.desenho20162.lavajato.model;
+package fga.unb.desenho20162.lavajato.Model;
 
 import fga.unb.desenho20162.lavajato.R;
 

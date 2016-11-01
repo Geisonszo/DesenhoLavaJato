@@ -1,69 +1,91 @@
 package fga.unb.desenho20162.lavajato.Controller;
 
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemAmericana;
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemMoto;
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemMotor;
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemPintura;
 import fga.unb.desenho20162.lavajato.DAO.LavagemDAO;
-import fga.unb.desenho20162.lavajato.model.Cliente;
-import fga.unb.desenho20162.lavajato.model.TipoLavagem;
-import fga.unb.desenho20162.lavajato.model.Veiculo;
+import fga.unb.desenho20162.lavajato.Estrategy.Lavagem;
+import fga.unb.desenho20162.lavajato.Model.Cliente;
+import fga.unb.desenho20162.lavajato.Model.TipoLavagem;
+import fga.unb.desenho20162.lavajato.Model.Veiculo;
 
 
 public class LavagemController {
 
     private Cliente cliente;
     private Veiculo veiculo;
-    private TipoLavagem lavagem;
+    private TipoLavagem tipoLavagem;
 
-    private LavagemDAO novaLavagem;
+    /*public void setCliente(String nome, String telefone) {
+
+        cliente = new Cliente(nome, telefone);
+    }
+
+    public void setVeiculo( String tipo, String placa, String cor, String marca, String modelo) {
+
+        veiculo = new Veiculo(tipo, placa, cor, marca, modelo);
+    }
+
+    public void setTipoLavagem (String descricao) {
+
+        double valor;
+        valor = valorLavagem(descricao);
+
+        tipoLavagem = new TipoLavagem(descricao, valor);
+    }*/
 
     public void setLavagem(String nome, String telefone , String tipo, String placa, String cor,
-                    String marca, String modelo, String tipo_lavagem) {
-
-        double valor = calculaValorTotal(tipo_lavagem, tipo);
+                    String marca, String modelo, String descricao) {
 
         cliente = new Cliente(nome, telefone);
         veiculo = new Veiculo(tipo, placa, cor, marca, modelo);
-        lavagem = new TipoLavagem(tipo_lavagem, valor);
+        tipoLavagem = new TipoLavagem(descricao, valorLavagem(descricao));
 
-        salvarLavagem(cliente, veiculo, lavagem);
+        salvarLavagem(cliente, veiculo, tipoLavagem);
     }
 
     private void salvarLavagem( Cliente cliente, Veiculo veiculo,
                                 TipoLavagem tipoLavagem) {
 
-        novaLavagem = new LavagemDAO();
+        LavagemDAO novaLavagem = new LavagemDAO();
 
-        novaLavagem.saveLavagemFirebase(cliente, veiculo, tipoLavagem);
+        novaLavagem.createLavagem(cliente, veiculo, tipoLavagem);
     }
 
-    private double calculaValorTotal ( String tipo_lavagem, String tipo ) {
+    private double valorLavagem (String tipoLavagem) {
 
-        double valor = 0;
+        Lavagem lavagem;
 
-        if (tipo_lavagem.equals("PINTURA") && tipo.equals("PEQUENO")) {
+        double valor = 0.0;
 
-            return valor =  20.00;
-        } else if (tipo_lavagem.equals("AMERICANA") && tipo.equals("PEQUENO")) {
+        switch (tipoLavagem) {
 
-            return valor =  30.00;
-        } else if (tipo_lavagem.equals("PINTURA") && tipo.equals("SUV")) {
+            case "AMERICANA" :
 
-            return valor =  30.00;
-        } else if (tipo_lavagem.equals("AMERICANA") && tipo.equals("SUV")) {
+                lavagem = new LavagemAmericana(veiculo.getTipo());
+                valor = lavagem.valorLavegem();
+                return valor;
 
-            return valor =  40.00;
-        } else if (tipo_lavagem.equals("PINTURA") && tipo.equals("CAMINHONETE")) {
+            case "PINTURA" :
 
-            return valor =  30.00;
-        } else if (tipo_lavagem.equals("AMERICANA") && tipo.equals("CAMINHONETE")) {
+                lavagem = new LavagemPintura(veiculo.getTipo());
+                valor = lavagem.valorLavegem();
+                return valor;
 
-            return valor =  40.00;
-        } else if (tipo_lavagem.equals("MOTOR")) {
+            case "MOTO" :
 
-            return valor =  25.00;
-        } else if (tipo.equals("MOTO")) {
+                lavagem = new LavagemMoto(veiculo.getTipo());
+                valor = lavagem.valorLavegem();
+                return valor;
 
-            return valor =  25.00;
+            case "MOTOR" :
+
+                lavagem = new LavagemMotor(veiculo.getTipo());
+                valor = lavagem.valorLavegem();
+                return valor;
         }
-        
+
         return valor;
     }
 }

@@ -3,7 +3,7 @@ package fga.unb.desenho20162.lavajato.Adapter;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.Query;
 
-import fga.unb.desenho20162.lavajato.model.OrdemLavagem;
+import fga.unb.desenho20162.lavajato.Model.OrdemLavagem;
 
 public class LavagemRecyclerAdapter extends FirebaseRecyclerAdapter <OrdemLavagem, LavagemViewHolder> {
 

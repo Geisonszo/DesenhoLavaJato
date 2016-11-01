@@ -81,6 +81,15 @@ public class CadastroLavagemActivity extends AppCompatActivity {
                         marca.getEditableText().toString(), modelo.getEditableText().toString(),
                         tipoLavagem.getSelectedItem().toString());
 
+                /*cadastroLavagem.setCliente(nome.getEditableText().toString(),
+                        telefone.getEditableText().toString());
+
+                cadastroLavagem.setVeiculo(tipo.getSelectedItem().toString(),
+                        placa.getEditableText().toString(), cor.getEditableText().toString(),
+                        marca.getEditableText().toString(), modelo.getEditableText().toString());
+
+                cadastroLavagem.setTipoLavagem(tipoLavagem.getSelectedItem().toString());*/
+
                 Intent listarLavagem = new Intent();
                 listarLavagem.setClass(CadastroLavagemActivity.this, ListaLavagensActivity.class);
                 startActivity(listarLavagem);

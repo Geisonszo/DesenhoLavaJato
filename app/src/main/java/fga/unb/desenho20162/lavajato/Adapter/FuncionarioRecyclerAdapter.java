@@ -4,7 +4,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 
-import fga.unb.desenho20162.lavajato.model.Funcionario;
+import fga.unb.desenho20162.lavajato.Model.Funcionario;
 
 public class FuncionarioRecyclerAdapter extends FirebaseRecyclerAdapter<Funcionario, FuncionarioViewHolder> {
 

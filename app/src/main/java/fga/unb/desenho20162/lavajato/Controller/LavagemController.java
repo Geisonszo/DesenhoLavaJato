@@ -1,11 +1,11 @@
 package fga.unb.desenho20162.lavajato.Controller;
 
-import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemAmericana;
-import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemMoto;
-import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemMotor;
-import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemPintura;
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemStrategyAmericana;
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemStrategyMoto;
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemStrategyMotor;
+import fga.unb.desenho20162.lavajato.ConcretStartegy.LavagemStrategyPintura;
 import fga.unb.desenho20162.lavajato.DAO.LavagemDAO;
-import fga.unb.desenho20162.lavajato.Estrategy.Lavagem;
+import fga.unb.desenho20162.lavajato.Estrategy.LavagemStrategy;
 import fga.unb.desenho20162.lavajato.Model.Cliente;
 import fga.unb.desenho20162.lavajato.Model.TipoLavagem;
 import fga.unb.desenho20162.lavajato.Model.Veiculo;
@@ -13,76 +13,71 @@ import fga.unb.desenho20162.lavajato.Model.Veiculo;
 
 public class LavagemController {
 
-    private Cliente cliente;
-    private Veiculo veiculo;
-    private TipoLavagem tipoLavagem;
+    private Cliente setCliente(String nome, String telefone) {
 
-    /*public void setCliente(String nome, String telefone) {
-
-        cliente = new Cliente(nome, telefone);
+        return new Cliente(nome, telefone);
     }
 
-    public void setVeiculo( String tipo, String placa, String cor, String marca, String modelo) {
-
-        veiculo = new Veiculo(tipo, placa, cor, marca, modelo);
-    }
-
-    public void setTipoLavagem (String descricao) {
+    private TipoLavagem setTipoLavagem(String descricao, String tamanho) {
 
         double valor;
-        valor = valorLavagem(descricao);
+        valor = valorLavagem(tamanho);
 
-        tipoLavagem = new TipoLavagem(descricao, valor);
-    }*/
+        return new TipoLavagem(valor, descricao);
+    }
 
-    public void setLavagem(String nome, String telefone , String tipo, String placa, String cor,
-                    String marca, String modelo, String descricao) {
+    private Veiculo setVeiculo(String tamanho, String placa, String cor, String marca, String modelo) {
 
-        cliente = new Cliente(nome, telefone);
-        veiculo = new Veiculo(tipo, placa, cor, marca, modelo);
-        tipoLavagem = new TipoLavagem(descricao, valorLavagem(descricao));
+        return new Veiculo(tamanho, placa, cor, marca, modelo);
+    }
+    
+    public void setLavagem(String nome, String telefone, String tamanho, String placa, String cor, 
+                           String marca, String modelo, String descricao) {
+
+        Cliente cliente = setCliente(nome, telefone);
+        Veiculo veiculo = setVeiculo(tamanho, placa, cor, marca, modelo);
+        TipoLavagem tipoLavagem = setTipoLavagem(descricao, tamanho);
 
         salvarLavagem(cliente, veiculo, tipoLavagem);
     }
 
-    private void salvarLavagem( Cliente cliente, Veiculo veiculo,
-                                TipoLavagem tipoLavagem) {
+    private void salvarLavagem(Cliente cliente, Veiculo veiculo, TipoLavagem tipoLavagem) {
 
         LavagemDAO novaLavagem = new LavagemDAO();
 
         novaLavagem.createLavagem(cliente, veiculo, tipoLavagem);
     }
 
-    private double valorLavagem (String tipoLavagem) {
+    private double valorLavagem(String tipoLavagem) {
 
-        Lavagem lavagem;
+        LavagemStrategy lavagemStrategy;
 
-        double valor = 0.0;
+        double valor = 0;
 
         switch (tipoLavagem) {
 
             case "AMERICANA" :
 
-                lavagem = new LavagemAmericana(veiculo.getTipo());
-                valor = lavagem.valorLavegem();
+                lavagemStrategy = new LavagemStrategyAmericana(tipoLavagem);
+                valor = lavagemStrategy.calculaValor();
                 return valor;
 
             case "PINTURA" :
 
-                lavagem = new LavagemPintura(veiculo.getTipo());
-                valor = lavagem.valorLavegem();
+                lavagemStrategy = new LavagemStrategyPintura(tipoLavagem);
+                valor = lavagemStrategy.calculaValor();
                 return valor;
 
             case "MOTO" :
 
-                lavagem = new LavagemMoto(veiculo.getTipo());
-                valor = lavagem.valorLavegem();
+                lavagemStrategy = new LavagemStrategyMoto(tipoLavagem);
+                valor = lavagemStrategy.calculaValor();
                 return valor;
 
             case "MOTOR" :
 
-                lavagem = new LavagemMotor(veiculo.getTipo());
-                valor = lavagem.valorLavegem();
+                lavagemStrategy = new LavagemStrategyMotor(tipoLavagem);
+                valor = lavagemStrategy.calculaValor();
                 return valor;
         }
 

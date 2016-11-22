@@ -23,8 +23,6 @@ public class CadastroLavagemActivity extends AppCompatActivity {
     private EditText marca;
     private EditText modelo;
     private Spinner tipoLavagem;
-    private ArrayAdapter<String> adapterTipo;
-    private ArrayAdapter<String> adapterTipoLavagem;
 
     Button btnCadastrar;
     Button btnCancelar;
@@ -51,10 +49,10 @@ public class CadastroLavagemActivity extends AppCompatActivity {
         placa.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
 
 
-        adapterTipo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapterTipo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
         adapterTipo.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 
-        adapterTipoLavagem = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapterTipoLavagem = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
         adapterTipoLavagem.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 
         tipo.setAdapter(adapterTipo);
@@ -88,7 +86,8 @@ public class CadastroLavagemActivity extends AppCompatActivity {
                         placa.getEditableText().toString(), cor.getEditableText().toString(),
                         marca.getEditableText().toString(), modelo.getEditableText().toString());
 
-                cadastroLavagem.setTipoLavagem(tipoLavagem.getSelectedItem().toString());*/
+                cadastroLavagem.setTipoLavagem(tipoLavagem.getSelectedItem().toString(),
+                    tipo.getSelectedItem().toString());*/
 
                 Intent listarLavagem = new Intent();
                 listarLavagem.setClass(CadastroLavagemActivity.this, ListaLavagensActivity.class);
@@ -117,4 +116,6 @@ public class CadastroLavagemActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

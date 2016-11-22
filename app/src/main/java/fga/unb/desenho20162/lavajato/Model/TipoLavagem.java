@@ -1,33 +1,36 @@
 package fga.unb.desenho20162.lavajato.Model;
 
+
 public class TipoLavagem {
 
-    private double valor;
-    private String descricao;
+    double valor;
+    String descricao;
+
 
     public TipoLavagem () {
 
+        // Contrutor vazio.
     }
 
-    public TipoLavagem ( String descricao, double valor) {
+    public TipoLavagem(double valor, String descricao) {
 
-        this.descricao = descricao;
-        this.valor = valor;
-    }
-
-    public void setValor(float valor) {
-        this.valor = valor;
-    }
-
-    public void setTipo_lavagem(String descricao) {
-        this.descricao = descricao;
+        this.setValor(valor);
+        this.setDescricao(descricao);
     }
 
     public double getValor() {
         return valor;
     }
 
-    public String getTipo_lavagem() {
+    private void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getDescricao() {
         return descricao;
+    }
+
+    private void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }

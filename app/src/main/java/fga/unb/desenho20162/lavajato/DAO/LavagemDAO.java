@@ -12,7 +12,7 @@ public class LavagemDAO {
 
     }
 
-   public void createLavagem( Cliente cliente, Veiculo veiculo, TipoLavagem tipoLavagem) {
+   public void createLavagem(Cliente cliente, Veiculo veiculo, TipoLavagem tipoLavagem) {
 
        DatabaseReference firebaseRef = connectToDB();
 
@@ -23,7 +23,7 @@ public class LavagemDAO {
        firebaseRef.child("cor").setValue(veiculo.getCor());
        firebaseRef.child("marca").setValue(veiculo.getMarca());
        firebaseRef.child("modelo").setValue(veiculo.getModelo());
-       firebaseRef.child("tipo_lavagem").setValue(tipoLavagem.getTipo_lavagem());
+       firebaseRef.child("tipo_lavagem").setValue(tipoLavagem.getDescricao());
        firebaseRef.child("valor_lavagem").setValue(tipoLavagem.getValor());
     }
 

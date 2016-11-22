@@ -9,8 +9,8 @@ public class Cliente {
 
     public Cliente ( String nome, String telefone) {
 
-        setNome(nome);
-        setTelefone(telefone);
+        this.setNome(nome);
+        this.setTelefone(telefone);
     }
 
     private void setNome(String nome) {

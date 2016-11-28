@@ -22,9 +22,9 @@ public class FuncionarioDAO {
 
     private DatabaseReference connectToDB() {
 
-        FactoryConnection factoryConnection = FactoryConnection.getInstance();
+        FirebaseConnection firebaseConnection = FirebaseConnection.getInstance();
 
-        return factoryConnection.getConnection().child("Funcionario").push();
+        return firebaseConnection.getConnection().child("Funcionario").push();
     }
 
 

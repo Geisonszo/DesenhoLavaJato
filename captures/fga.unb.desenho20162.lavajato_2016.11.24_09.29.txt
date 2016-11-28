@@ -1,0 +1,101 @@
+TASK fga.unb.desenho20162.lavajato id=1390
+  ACTIVITY fga.unb.desenho20162.lavajato/.view.ListaLavagensActivity 64a68f9 pid=15113
+    Local FragmentActivity 97f4631 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@f268161
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@f268161
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{ff32a98 V.E..... ... 0,0-1080,1920}
+        android.widget.LinearLayout{d6d486 V.E..... ... 0,0-1080,1920}
+          android.view.ViewStub{5dd8147 G.E..... ... 0,0-0,0 #102047c android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{9ddd74 V.E..... ... 0,72-1080,1920}
+            android.support.v7.widget.ActionBarOverlayLayout{868d29d V.E..... ... 0,0-1080,1848 #7f0d006e app:id/decor_content_parent}
+              android.support.v7.widget.ContentFrameLayout{73bb312 V.E..... ... 0,168-1080,1848 #1020002 android:id/content}
+                android.support.design.widget.CoordinatorLayout{6e6eae3 V.E..... ... 0,0-1080,1680}
+                  android.support.v7.widget.RecyclerView{b13a2f1 VFED.... F.. 0,0-1080,1680 #7f0d00a0 app:id/recycleViewLavagem}
+                    android.widget.LinearLayout{e4d8189 V.E...C. ... 0,0-1080,672}
+                      android.support.v7.widget.CardView{a755ce0 V.E...C. ... 6,6-1074,666}
+                        android.widget.RelativeLayout{b84fb99 V.E..... ... 0,0-1068,660}
+                          android.support.v7.widget.AppCompatTextView{d9dee5e V.ED.... ... 300,0-1068,180 #7f0d00d6 app:id/idTipoLavagem}
+                          android.support.v7.widget.AppCompatImageView{593523f V.ED.... ... 0,180-540,660 #7f0d00d8 app:id/imageTipo}
+                          android.support.v7.widget.AppCompatTextView{e83670c V.ED.... ... 540,180-688,402 #7f0d00d9 app:id/placa}
+                          android.support.v7.widget.AppCompatTextView{6a0b855 V.ED.... ... 688,180-1068,402 #7f0d00da app:id/idPlaca}
+                          android.support.v7.widget.AppCompatTextView{156926a V.ED.... ... 0,0-300,180 #7f0d00d7 app:id/tipo_lavagem}
+                          android.support.v7.widget.AppCompatTextView{a74d35b V.ED.... ... 540,570-652,660 #7f0d00dd app:id/cor}
+                          android.support.v7.widget.AppCompatTextView{f85e7f8 V.ED.... ... 540,510-661,570 #7f0d00df app:id/idMarca}
+                          android.support.v7.widget.AppCompatTextView{a8184d1 V.ED.... ... 540,396-688,456 #7f0d00db app:id/cliente}
+                          android.support.v7.widget.AppCompatTextView{a436b36 V.ED.... ... 688,402-1068,462 #7f0d00dc app:id/idNome}
+                          android.support.v7.widget.AppCompatTextView{b234a37 V.ED.... ... 652,577-952,660 #7f0d00e2 app:id/idCor}
+                          android.support.v7.widget.AppCompatTextView{c2d8ba4 V.ED.... ... 688,456-1068,516 #7f0d00e1 app:id/idTelefone}
+                          android.support.v7.widget.AppCompatTextView{4c89d0d V.ED.... ... 540,450-652,510 #7f0d00de app:id/fone}
+                          android.support.v7.widget.AppCompatTextView{e5304c2 V.ED.... ... 724,510-994,570 #7f0d00e0 app:id/idModelo}
+                    android.widget.LinearLayout{3cd8abf V.E...C. ... 0,672-1080,1344}
+                      android.support.v7.widget.CardView{4d852d3 V.E...C. ... 6,6-1074,666}
+                        android.widget.RelativeLayout{b89be10 V.E..... ... 0,0-1068,660}
+                          android.support.v7.widget.AppCompatTextView{1eefd09 V.ED.... ... 300,0-1068,180 #7f0d00d6 app:id/idTipoLavagem}
+                          android.support.v7.widget.AppCompatImageView{1d0ab0e V.ED.... ... 0,180-540,660 #7f0d00d8 app:id/imageTipo}
+                          android.support.v7.widget.AppCompatTextView{4cb492f V.ED.... ... 540,180-688,402 #7f0d00d9 app:id/placa}
+                          android.support.v7.widget.AppCompatTextView{434ab3c V.ED.... ... 688,180-1068,402 #7f0d00da app:id/idPlaca}
+                          android.support.v7.widget.AppCompatTextView{30160c5 V.ED.... ... 0,0-300,180 #7f0d00d7 app:id/tipo_lavagem}
+                          android.support.v7.widget.AppCompatTextView{706a1a V.ED.... ... 540,570-652,660 #7f0d00dd app:id/cor}
+                          android.support.v7.widget.AppCompatTextView{a4d494b V.ED.... ... 540,510-637,570 #7f0d00df app:id/idMarca}
+                          android.support.v7.widget.AppCompatTextView{a3f3f28 V.ED.... ... 540,396-688,456 #7f0d00db app:id/cliente}
+                          android.support.v7.widget.AppCompatTextView{31c4441 V.ED.... ... 688,402-1068,462 #7f0d00dc app:id/idNome}
+                          android.support.v7.widget.AppCompatTextView{b1b0de6 V.ED.... ... 652,577-952,660 #7f0d00e2 app:id/idCor}
+                          android.support.v7.widget.AppCompatTextView{ea52f27 V.ED.... ... 688,456-1068,516 #7f0d00e1 app:id/idTelefone}
+                          android.support.v7.widget.AppCompatTextView{fdd25d4 V.ED.... ... 540,450-652,510 #7f0d00de app:id/fone}
+                          android.support.v7.widget.AppCompatTextView{8a7e37d V.ED.... ... 724,510-994,570 #7f0d00e0 app:id/idModelo}
+                    android.widget.LinearLayout{d6e158e V.E...C. ... 0,1344-1080,2016}
+                      android.support.v7.widget.CardView{67a2272 V.E...C. ... 6,6-1074,666}
+                        android.widget.RelativeLayout{eab96c3 V.E..... ... 0,0-1068,660}
+                          android.support.v7.widget.AppCompatTextView{4d0cb40 V.ED.... ... 300,0-1068,180 #7f0d00d6 app:id/idTipoLavagem}
+                          android.support.v7.widget.AppCompatImageView{e543a79 V.ED.... ... 0,180-540,660 #7f0d00d8 app:id/imageTipo}
+                          android.support.v7.widget.AppCompatTextView{643f3be V.ED.... ... 540,180-688,402 #7f0d00d9 app:id/placa}
+                          android.support.v7.widget.AppCompatTextView{226dc1f V.ED.... ... 688,180-1068,402 #7f0d00da app:id/idPlaca}
+                          android.support.v7.widget.AppCompatTextView{975b6c V.ED.... ... 0,0-300,180 #7f0d00d7 app:id/tipo_lavagem}
+                          android.support.v7.widget.AppCompatTextView{fd50535 V.ED.... ... 540,570-652,660 #7f0d00dd app:id/cor}
+                          android.support.v7.widget.AppCompatTextView{1478dca V.ED.... ... 540,510-673,570 #7f0d00df app:id/idMarca}
+                          android.support.v7.widget.AppCompatTextView{ce71b3b V.ED.... ... 540,396-688,456 #7f0d00db app:id/cliente}
+                          android.support.v7.widget.AppCompatTextView{354c258 V.ED.... ... 688,402-1068,462 #7f0d00dc app:id/idNome}
+                          android.support.v7.widget.AppCompatTextView{65dbfb1 V.ED.... ... 652,577-952,660 #7f0d00e2 app:id/idCor}
+                          android.support.v7.widget.AppCompatTextView{a38bc96 V.ED.... ... 688,456-1068,516 #7f0d00e1 app:id/idTelefone}
+                          android.support.v7.widget.AppCompatTextView{5a23017 V.ED.... ... 540,450-652,510 #7f0d00de app:id/fone}
+                          android.support.v7.widget.AppCompatTextView{97fac04 V.ED.... ... 724,510-994,570 #7f0d00e0 app:id/idModelo}
+                  android.support.design.widget.FloatingActionButton{a67fed6 VFED..C. ... 864,1464-1032,1632 #7f0d00a1 app:id/fl_add_bt_lavagem}
+              android.support.v7.widget.ActionBarContainer{dda5ed V.ED.... ... 0,0-1080,168 #7f0d006f app:id/action_bar_container}
+                android.support.v7.widget.Toolbar{93c0c22 V.E..... ... 0,0-1080,168 #7f0d0070 app:id/action_bar}
+                  android.support.v7.widget.AppCompatTextView{e8fb6b3 V.ED.... ... 48,43-415,124}
+                  android.support.v7.widget.ActionMenuView{e4d8470 V.E..... ... 1080,0-1080,168}
+                android.support.v7.widget.ActionBarContextView{3fbb3e9 G.E..... ... 0,0-0,0 #7f0d0071 app:id/action_context_bar}
+        android.view.View{232c86e V.ED.... ... 0,0-1080,72 #102002f android:id/statusBarBackground}
+
+  ACTIVITY fga.unb.desenho20162.lavajato/.view.MainActivity 6bdeaad pid=15113
+    Local FragmentActivity ed0008 State:
+      mCreated=truemResumed=false mStopped=true mReallyStopped=true
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@bc50b0f
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@bc50b0f
+      mCurState=2 mStateSaved=true mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{1883f0a I.E..... ... 0,0-1080,1920}
+        android.widget.LinearLayout{8de779c V.E..... ... 0,0-1080,1920}
+          android.view.ViewStub{dd2a5a5 G.E..... ... 0,0-0,0 #102047c android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{3c6fd7a V.E..... ... 0,72-1080,1920}
+            android.support.v7.widget.ActionBarOverlayLayout{351492b V.E..... ... 0,0-1080,1848 #7f0d006e app:id/decor_content_parent}
+              android.support.v7.widget.ContentFrameLayout{297188 V.E..... ... 0,168-1080,1848 #1020002 android:id/content}
+                android.widget.RelativeLayout{96cf721 V.E..... ... 0,0-1080,1680}
+                  android.widget.LinearLayout{b377746 V.E..... ... 48,165-1032,1575}
+                    android.support.v7.widget.AppCompatImageView{3194d07 V.ED.... ... 165,0-765,600 #7f0d00a2 app:id/imageView2}
+                    android.support.v7.widget.AppCompatButton{1a81e34 VFED..C. ... -33,615-1017,855 #7f0d00a3 app:id/button_lavagens}
+                    android.support.v7.widget.AppCompatButton{e00e45d VFED..C. ... -33,885-1017,1125 #7f0d00a4 app:id/button_funcionarios}
+                    android.support.v7.widget.AppCompatButton{8e3c1d2 VFED..C. ... -33,1155-1017,1395 #7f0d00a5 app:id/button_relatorios}
+              android.support.v7.widget.ActionBarContainer{873b2a3 V.ED.... ... 0,0-1080,168 #7f0d006f app:id/action_bar_container}
+                android.support.v7.widget.Toolbar{6c2e9a0 V.E..... ... 0,0-1080,168 #7f0d0070 app:id/action_bar}
+                  android.support.v7.widget.AppCompatTextView{5ec6959 V.ED.... ... 48,43-415,124}
+                  android.support.v7.widget.ActionMenuView{198291e V.E..... ... 1080,0-1080,168}
+                android.support.v7.widget.ActionBarContextView{584d5ff G.E..... ... 0,0-0,0 #7f0d0071 app:id/action_context_bar}
+        android.view.View{4fcffcc V.ED.... ... 0,0-1080,72 #102002f android:id/statusBarBackground}

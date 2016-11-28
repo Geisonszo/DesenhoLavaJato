@@ -3,15 +3,15 @@ package fga.unb.desenho20162.lavajato.DAO;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class FactoryConnection {
+public class FirebaseConnection {
 
-    private static FactoryConnection instance;
+    private static FirebaseConnection instance;
 
-    static FactoryConnection getInstance () {
+    static FirebaseConnection getInstance () {
 
         if(instance == null){
 
-            instance = new FactoryConnection();
+            instance = new FirebaseConnection();
         } else {
 
             //Do nothing!

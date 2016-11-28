@@ -1,8 +1,12 @@
 package fga.unb.desenho20162.lavajato.DAO;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 import fga.unb.desenho20162.lavajato.Model.Cliente;
+import fga.unb.desenho20162.lavajato.Model.OrdemLavagem;
 import fga.unb.desenho20162.lavajato.Model.TipoLavagem;
 import fga.unb.desenho20162.lavajato.Model.Veiculo;
 
@@ -11,6 +15,13 @@ public class LavagemDAO {
     public LavagemDAO() {
 
     }
+
+  private DatabaseReference connectToDB() {
+
+    DatabaseReference factoryConnection = FirebaseConnection.getInstance().getConnection();
+
+    return factoryConnection.child("Lavagem").push();
+  }
 
    public void createLavagem(Cliente cliente, Veiculo veiculo, TipoLavagem tipoLavagem) {
 
@@ -26,11 +37,4 @@ public class LavagemDAO {
        firebaseRef.child("tipo_lavagem").setValue(tipoLavagem.getDescricao());
        firebaseRef.child("valor_lavagem").setValue(tipoLavagem.getValor());
     }
-
-   private DatabaseReference connectToDB() {
-
-       DatabaseReference factoryConnection = FactoryConnection.getInstance().getConnection();
-
-       return factoryConnection.child("Lavagem").push();
-   }
 }
